@@ -12,8 +12,6 @@ class Review < ::ActiveRecord::Base
       :body
     ].freeze
 
-  attr_accessible :rating, :body
-
   # Associations.
   belongs_to :reviewable, polymorphic: true
   belongs_to :reviewer,   polymorphic: true
